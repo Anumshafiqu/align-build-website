@@ -168,8 +168,11 @@
 .hero-section {
   position: relative;
   height: 100vh;
-  background: url('../../public/download\ \(1\).jpg') no-repeat center center;
-  background-size: cover;
+  /* background: url('../../public/download\ \(1\).jpg') no-repeat center center; */
+  background: url('https://align.build/wp-content/uploads/2023/04/Davies_SkylineDR_21-1536x1024.jpg') no-repeat center center;
+  /* background-size: cover; */
+  /* background: rgba(0, 0, 0, 0.5); */
+
 }
 
 /* Hero Content */
@@ -360,4 +363,228 @@ button:hover {
 
 .navbar-nav .btn:hover {
   background-color: #5a664d;
+  color: white;
 }
+.image-hero{
+  height: 100vh;
+  width: 450px;
+}
+.herosection{
+  margin-left: 150px;
+}
+h2{
+  color: #5a664d;
+  letter-spacing: 3px;
+  text-align: center;
+}
+p{
+  color: #5a664d;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+.button-hero{
+  padding: 14px;
+  color: #5a664d;
+  border: 2px solid #5a664d ;
+  letter-spacing: 1px;
+}
+.hero-1{
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-section {
+  position: relative;
+  background: url('https://align.build/wp-content/uploads/2023/06/Copy-of-Davies_SkylineDR_25-1536x1025.jpg') center/cover no-repeat;
+  height: 100vh; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity */
+}
+
+.hero-content {
+  /* position: relative; */
+  color: white;
+  /* z-index: 2; */
+}
+
+.hero-content h1 {
+  font-size: 37px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 50px;
+  font-family: sans-serif;
+}
+
+.btn-outline-light {
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.button-hero-2{
+  border: 2px solid white;
+  padding: 16px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+}
+button:hover {
+  background-color: #5F6D48 ;
+  color: white;
+  border: 2px solid #5F6D48;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #5F6D48;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  line-height: 40px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #5F6D48;
+  margin-bottom: 15px;
+}
+
+.btn-outline-dark {
+  border: 2px solid #5F6D48;
+  color: #5F6D48;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background: #5F6D48;
+  color: white;
+}
+.image-hero-1{
+  height: 120vh;
+  width: 90%;
+}
+
+.icon-2 {
+  width: 130px; /* Adjust size */
+  margin-bottom: 10px;
+  color: #5F6D48;
+}
+
+.subtitle-icon {
+  font-size: 18px;
+  color: #5F6D48;
+  font-weight: 400;
+}
+
+.main-text {
+  font-size: 20px;
+  color: #5F6D48;
+  margin: 15px 0;
+  letter-spacing: 2px;
+  line-height: 30px;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 22px;
+  color: #5F6D48;
+}
+/* Common Section Styles */
+.section {
+  padding: 80px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+/* Background Images */
+/* .bg-image-left {
+  background: url('https://align.build/wp-content/uploads/2023/04/Wells34_11-2-1536x1024.jpg') center/cover no-repeat;
+}
+
+.bg-image-right {
+  background: url('https://align.build/wp-content/uploads/2024/12/Cloudscape_DSC7381-1536x1025.jpg') center/cover no-repeat;
+} */
+
+/* Common Section Styles */
+.section {
+  position: relative;
+  padding: 80px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Background Images with Opacity */
+.bg-image-left,
+.bg-image-right {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-image-left::before,
+.bg-image-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity here (0.6 means 60% dark overlay) */
+  z-index: -1;
+}
+
+/* Background Images */
+.bg-image-left {
+  background-image: url('https://align.build/wp-content/uploads/2023/04/Wells34_11-2-1536x1024.jpg');
+}
+
+.bg-image-right {
+  background-image: url('https://align.build/wp-content/uploads/2024/12/Cloudscape_DSC7381-1536x1025.jpg');
+}
+
+/* Text and Button Styling */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 18px;
+}
+
+
+
+
+
+
+

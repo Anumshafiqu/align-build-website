@@ -1,51 +1,50 @@
-
 <!-- Hero Section -->
 <header class="hero-section">
-<nav class="navbar navbar-expand-lg fixed-top custom-navbar" [ngClass]="{'scrolled': isScrolled}">
-  <div class="menu-icon text-white  d-lg-none" (click)="toggleMenu()">☰</div>
-  <a class="navbar-brand mx-6" href="#">align</a>
-  <div class="menu-container" *ngIf="isMenuOpen">
-    <div class="d-flex ">
-      <button class="close-btn mt-2 ml-auto icon-child-1 small fs-6" (click)="toggleMenu()"><i class="fa fa-close"
-          aria-hidden="true"></i></button>
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar" [ngClass]="{'scrolled': isScrolled}">
+    <div class="menu-icon text-white  d-lg-none" (click)="toggleMenu()">☰</div>
+    <a class="navbar-brand mx-6" href="#">align</a>
+    <div class="menu-container" *ngIf="isMenuOpen">
+      <div class="d-flex ">
+        <button class="close-btn mt-2 ml-auto icon-child-1 small fs-6" (click)="toggleMenu()"><i class="fa fa-close"
+            aria-hidden="true"></i></button>
+      </div>
+      <div *ngIf="menuStack.length > 0" class="menu-header ml-4 fw-bold fs-6">
+        <button (click)="goBack()" class="fw-bold small mt-2"><i class="fa fa-chevron-left"
+            aria-hidden="true"></i></button>
+      </div>
+      <ul class="mt-4">
+        <li *ngFor="let item of currentMenu" (click)="navigateTo(item)" class="icon-child ">
+          {{ item.label }}
+          <span *ngIf="item.children">›</span>
+        </li>
+      </ul>
     </div>
-    <div *ngIf="menuStack.length > 0" class="menu-header ml-4 fw-bold fs-6">
-      <button (click)="goBack()" class="fw-bold small mt-2"><i class="fa fa-chevron-left"
-          aria-hidden="true"></i></button>
-    </div>
-    <ul class="mt-4">
-      <li *ngFor="let item of currentMenu" (click)="navigateTo(item)" class="icon-child ">
-        {{ item.label }}
-        <span *ngIf="item.children">›</span>
-      </li>
-    </ul>
-  </div>
-   <div class="container">
+    <div class="container">
 
-    <div class="collapse navbar-collapse ml-8" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item position-static">
-          <a class="nav-link fw-bold mx-2 card-2" href="#">Projects</a>
-        </li>
-        <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
-            services
-          </a>
-        </li>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown position-static">
-              <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
-                Learn
-              </a>
-            </li>
-          </ul>
-        </div>
-        <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
-            About
-          </a>
-          <!-- <div class="dropdown-menu mega-menu menu-item-1">
+      <div class="collapse navbar-collapse ml-8" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item position-static">
+            <a class="nav-link fw-bold mx-2 card-2" href="#">Projects</a>
+          </li>
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
+              services
+            </a>
+          </li>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown position-static">
+                <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
+                  Learn
+                </a>
+              </li>
+            </ul>
+          </div>
+          <li class="nav-item dropdown position-static">
+            <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
+              About
+            </a>
+            <!-- <div class="dropdown-menu mega-menu menu-item-1">
             <div class="container">
               <div class="row">
                 <div class="col-md-12">
@@ -58,16 +57,18 @@
               </div>
             </div>
           </div> -->
-        </li>
-      </ul>
+          </li>
+        </ul>
 
 
-      <div class="ml-auto">
-        <button type="button" class="btn btn-outline-light button text-white fw-bold border-2 border-white rounded-0 px-4">Book a quick chat</button>
+        <div class="ml-auto">
+          <button type="button"
+            class="btn btn-outline-light button text-white fw-bold border-2 border-white rounded-0 px-4">Book a quick
+            chat</button>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
       <a class="navbar-brand" href="#">align®</a>
       
@@ -112,8 +113,8 @@
       </div>
     </div>
   </nav> -->
-  
-</nav>
+
+  </nav>
   <!-- Hero Content -->
   <div class="hero-content">
     <h1>high-quality, unique, healthy homes</h1>
@@ -122,82 +123,230 @@
 
 <!-- card section -->
 <div class="card-1">
-<div class="container py-5">
-  <div class="row">
-    <!-- Card 1 -->
-    <div class=" col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
-      <div class="custom-card">
-        <i class="fa-regular fa-heart icon my-3"></i>
-        <h3 class="card-title text-center mt-4">designed around <br> your lifestyle</h3>
-        <p class="card-text mt-4 text-center">
-          Our proven methodology guides you through the process of designing a dream home that is built around your lifestyle.
-        </p>
-        <a href="#" class="read-more">read more</a>
+  <div class="container py-5">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class=" col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
+        <div class="custom-card">
+          <i class="fa-regular fa-heart icon my-3"></i>
+          <h3 class="card-title text-center mt-4">designed around <br> your lifestyle</h3>
+          <p class="card-text mt-4 text-center">
+            Our proven methodology guides you through the process of designing a dream home that is built around your
+            lifestyle.
+          </p>
+          <a href="#" class="read-more">read more</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
+        <div class="custom-card">
+          <i class="fa-solid fa-key icon my-3"></i>
+          <h3 class="card-title mt-4">built on time and on budget</h3>
+          <p class="card-text mt-4">
+            We collaborate with builders to ensure your dream home is planned and built on time and on budget.
+          </p>
+          <a href="#" class="read-more">read more</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
+        <div class="custom-card">
+          <i class="fa-solid fa-tree icon my-3"></i>
+          <h3 class="card-title text-center mt-4">making the world better one home at a time</h3>
+          <p class="card-text mt-4">
+            Our mission is to build carbon-positive homes, and for every home we design and build, 650 trees are
+            planted.
+          </p>
+          <a href="#" class="read-more">read more</a>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Card 2 -->
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
-      <div class="custom-card">
-        <i class="fa-solid fa-key icon my-3"></i>
-        <h3 class="card-title mt-4">built on time and on budget</h3>
-        <p class="card-text mt-4">
-          We collaborate with builders to ensure your dream home is planned and built on time and on budget.
-        </p>
-        <a href="#" class="read-more">read more</a>
+
+  <video width="100%" height="100%" controls id="myVideo" width="100%">
+    <source src="https://align.build/wp-content/uploads/2021/05/video-2.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+
+
+  <div class="container-fluid">
+    <div class="row mx-2 mt-8">
+      <h2 class="fw-bold card-3 fs-2 mt-8">three ways things go wrong when <br> building your dream home</h2>
+      <p class="fw-medium card-text mt-2">and how to overcome them</p>
+      <div class="container text-center feature-section">
+        <div class="row">
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 feature-item border-left">
+            <i class="fa fa-user icon" aria-hidden="true"></i>
+            <h3 class="mt-4 fw-medium mt-4">quality control</h3>
+            <p class="card-4 text-left mt-4">In most builds, the devil is in the detail. Vague and imprecise plans force
+              builders to make decisions on-site that can take the design off track.</p>
+            <p class="card-4 text-left">The Aligned Home® process uses the BuildPrint - which details each and every
+              variable and takes out all the surprises.</p>
+
+          </div>
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 feature-item">
+            <i class="fa fa-home icon" aria-hidden="true"></i>
+            <h3 class="mt-4 fw-medium mt-4">built on time and on budget</h3>
+            <p class="card-4 text-left mt-4"> Custom-designed building projects are notorious for running over time and
+              budget.</p>
+            <p class="card-4 text-left">Our 'Architect-Builder-Client Model' allows for all costs from the start, so we
+              can provide an accurate estimated project budget. This enables your builder to provide a fixed-price
+              construction quote.</p>
+          </div>
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 feature-item">
+            <i class="fa fa-user-secret icon" aria-hidden="true"></i>
+            <h3 class="mt-4 fw-medium mt-4">design overwhelm</h3>
+            <p class="card-4 text-left mt-4">Designing a home is a project with 1001 moving parts. Each decision unpacks
+              more complexity.</p>
+            <p class="card-4 text-left">Our design team will guide you through our three-stage design process, using our
+              six-element method. Your architect, interior designer, and builder will work with you on all decisions
+              from start to finish.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-4 colxl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="image-hero">
+          <img src="https://align.build/wp-content/uploads/2023/06/Copy-of-Davies_SkylineDR_34-1-609x1024.jpg" alt=""
+            class="image-hero">
+          <!-- <img src="https://align.build/wp-content/uploads/2023/06/Copy-of-Davies_SkylineDR_25-1536x1025.jpg" alt=""
+            class="image-hero"> -->
+        </div>
+      </div>
+      <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12">
+        <div class="herosection">
+          <h2 class="fw-bold ">custom design, clarity and communication</h2>
+          <p class="text-center mt-4 fw-medium">how we design your forever home</p>
+          <p class="">Align guides you through the architecture of your dream home with our signature Six Elements of a
+            Dream
+            Home methodology to capture your needs in all aspects of your life.</p>
+          <p class="mt-4">Our architect and interior designer works with your builder and with you on the BuildPrint to
+            pin down
+            every detail. This allows your builder to accurately cost and schedule the project from the start.</p>
+          <div class="d-flex justify-content-center align-items-center mt-5">
+            <button class="btn btn-outline-dark fw-bold rounded-0 px-3 button-hero">explore align's design
+              methodology</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <img src="https://align.build/wp-content/uploads/2023/06/Copy-of-Davies_SkylineDR_25-1536x1025.jpg" alt=""
+          class="hero-1">
       </div>
     </div>
+  </div> -->
+  <!-- <div class="mt-8">
+    <img src="https://align.build/wp-content/uploads/2023/06/Copy-of-Davies_SkylineDR_25-1536x1025.jpg" alt=""
+      class="hero-1">
+  </div> -->
+</div>
 
-    <!-- Card 3 -->
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
-      <div class="custom-card">
-        <i class="fa-solid fa-tree icon my-3"></i>
-        <h3 class="card-title text-center mt-4">making the world better one home at a time</h3>
-        <p class="card-text mt-4">
-          Our mission is to build carbon-positive homes, and for every home we design and build, 650 trees are planted.
-        </p>
-        <a href="#" class="read-more">read more</a>
+<div class="hero-section mt-8">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1 class="card-7 fw-bold">ask the questions that your <br> home needs to answer</h1>
+    <button class="btn btn-outline-light px-5 mt-4 button fw-bold rounded-0 px-3 button-hero-2">take our dream home
+      evaluation</button>
+  </div>
+</div>
+
+<div class="container-fluid mt-8">
+  <div class="row align-items-center mx-6">
+    <!-- Left Side - Image -->
+    <div class="col-md-6">
+      <img src="https://align.build/wp-content/uploads/2021/05/i-img-15.jpg" class="image-hero-1" alt="Koala Image">
+    </div>
+
+    <!-- Right Side - Text Content -->
+    <div class="col-md-6">
+      <h1 class="title">environmentally designed sanctuaries</h1>
+      <p class="subtitle">from concept to completion</p>
+      <p>
+        Align believes that good design should be good for people and good for the planet,
+        and our mission is to accelerate the move towards carbon-positive homes.
+      </p>
+      <p>
+        Align designs homes that are built for your family's health and happiness.
+        And for every home we design and build, we are dedicated to planting 650 trees.
+      </p>
+      <p>
+        This is the Tree+House Project and this is a part of our commitment to making
+        the world a better place, one home at a time.
+      </p>
+      <div class="d-flex justify-content-center align-items-center">
+        <button class="btn btn-outline-dark px-4 mt-4 button fw-medium rounded-0 px-3 button-hero-2">mission and
+          tree+house project</button>
       </div>
     </div>
   </div>
 </div>
 
+<div class="container text-center my-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex justify-content-center align-items-center">
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCABmAJADASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAIEBQEDBv/EADMQAAICAgAEAwUFCQAAAAAAAAABAgMEEQUSMVETIUEVIjJhcRQzU4GSIyRScpGhscHR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A+zAAAAAAAAAAAAAAAAAOJqSTi00/VAdAAAAAAAAAAAAAAAAAAEbJxqg5zajFdWymsvJvW8bH1D0nY9b/ACGWvHzqMeX3aTnJd+xLMtnKccWh6smvOX8Me5BVyIX24ttluVGUYbThWvLfZs0MOHh4lUe0UVc2qGNwuVVa1vSXdvZeguWEY9loCQAKAAAAAAAAAAAELVN1TVT1PT5X8yYAzcbKzbquZV1S09Pb09k3mZVPvZGL7nrKD3ojCqDzMnFsW4W6sS6fX+/+CTrycPzqk76V1hL4l9GQMiXixrzcZqbr3td4+qPLByqErci62Ktsl5pvzS9EeE761LJ+zv8AZ208zj2e9FnIdWLw+qfhVys5Yxi5RXXXUiJJviGRCai1jVPmTa1zv/hoGJz4z+8y8i2fq4bSX0JU3W+Ko4l9sm+kLo7T/MtVsgoU8Rk71j3UONm9Ple0XygAAAAAAAAAAAAArZmNK7ksqlyXV/C/9M8llZmuR4bdnfm90sX5dONrxZqLfRdWVpcUqkuWiMp2t6jDWtkFXJ4fbCi292LxJec4xXlo7HCsycPx5S57tJwXokvQtfY7r4/vWRNb6wr8kvl8wuHzpjrHyrYa6KT2v6Eg7TxDG5FGb8Ga6wktaZCzLnlvwsLen5Sta0or5HFl1xbhxCuEbY+vLtSXdFinMxZ6jVbBdl0KJY2LXjQ1Bbb+KT6s9wCgAAAAAAAAAAByT5Yt9dLZ0AY2FlYsOa7IlzXzbbbi3r6Fv2ph73zvf8rLwIKXtXE/Ef6WPauJ+I/0sugChLiWFJpyltrpuD8jzuy+HXx1Yk/moNNGmAMzhuWnbLH8R2QS3XJrz12ZpgFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/2Q=="
+          alt="Leaf Icon" class="icon-2">
+          <h5 class="fw-medium subtitle-icon mt-2">we believe in a future that is built to grow</h5>
+      </div>
+      <h5 class="main-text fw-medium">
+        for every dream home designed with align <br>
+        <span class="bold-text">150 trees are planted.</span>
+      </h5>
 
-<video width="100%" height="100%" controls id="myVideo" width="100%">
-  <source src="https://align.build/wp-content/uploads/2021/05/video-2.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-
+      <!-- Second Statement -->
+      <h5 class="main-text fw-medium mt-4">
+        for every dream home built, <br>
+        <span class="bold-text">500 trees are planted.</span>
+      </h5>
+    </div>
+  </div>
+</div>
 
 <div class="container-fluid">
-  <div class="row mx-2 mt-8">
-    <h2 class="fw-bold card-3 fs-2 mt-8">three ways things go wrong when <br> building your dream home</h2>
-    <p class="fw-medium card-text mt-2">and how to overcome them</p>
-    <div class="container text-center feature-section">
-      <div class="row">
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 feature-item border-left">
-          <i class="fa fa-user icon" aria-hidden="true"></i>
-          <h3 class="mt-4 fw-medium mt-4">quality control</h3>
-          <p class="card-4 text-left mt-4">In most builds, the devil is in the detail. Vague and imprecise plans force builders to make decisions on-site that can take the design off track.</p>
-          <p class="card-4 text-left">The Aligned Home® process uses the BuildPrint - which details each and every variable and takes out all the surprises.</p>
-          
-        </div>
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 feature-item">
-          <i class="fa fa-home icon" aria-hidden="true"></i>
-          <h3 class="mt-4 fw-medium mt-4">built on time and on budget</h3>
-          <p class="card-4 text-left mt-4"> Custom-designed building projects are notorious for running over time and budget.</p>
-          <p class="card-4 text-left">Our 'Architect-Builder-Client Model' allows for all costs from the start, so we can provide an accurate estimated project budget. This enables your builder to provide a fixed-price construction quote.</p>
-        </div>
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 feature-item">
-          <i class="fa fa-user-secret icon" aria-hidden="true"></i>
-          <h3 class="mt-4 fw-medium mt-4">design overwhelm</h3>
-          <p class="card-4 text-left mt-4">Designing a home is a project with 1001 moving parts. Each decision unpacks more complexity.</p>
-          <p class="card-4 text-left">Our design team will guide you through our three-stage design process, using our six-element method. Your architect, interior designer, and builder will work with you on all decisions from start to finish.</p>
-        </div>
-      </div>
+  <!-- Top Section -->
+  <div class="row text-center text-white">
+    <!-- Left Section -->
+    <div class="col-md-6 section bg-image-left">
+      <h2 class="title">built projects</h2>
+      <p class="subtitle">
+        where our clients' dream designs become a part of their reality
+      </p>
+      <button class="btn btn-outline-light">explore projects</button>
     </div>
-    
+
+    <!-- Right Section -->
+    <div class="col-md-6 section bg-image-right">
+      <h2 class="title">dream home book</h2>
+      <p class="subtitle">
+        get your copy of our founder's field guide to designing and building your dream home.
+      </p>
+      <button class="btn btn-outline-light">get your book</button>
+    </div>
   </div>
-</div>
+
+  <!-- Bottom Section -->
+  <div class="footer-section">
+    <div class="tree-info">
+      <img src="assets/leaf-icon.png" class="icon" alt="Leaf Icon">
+      <span>16,348 trees planted</span>
+    </div>
+    <span class="mission-text">
+      our mission is to plant 1 million trees by 2050
+    </span>
+  </div>
 </div>
