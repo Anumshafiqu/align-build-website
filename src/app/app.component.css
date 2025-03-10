@@ -53,19 +53,22 @@
   position: absolute;
   top: 100%;
   left: 730px;
-  border-radius: 5px;
   width: 240px;
   z-index: 1;
-  height: 150px;
+  height: 140px;
   background-color: white;
+  border-radius: 0;
+
+
 }
 
 .dropdown-row li {
   padding: 2px 0;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 17px;
   font-family: sans-serif;
   margin: 0;
+  border-radius: 0;
 }
 
 .dropdown-row ul {
@@ -198,7 +201,7 @@
   background-color: #F7F6F1;
 }
 
-.card-1 {
+.card-4 {
   background-color: #F7F6F1;
 }
 
@@ -302,6 +305,17 @@ button:hover {
 @media (max-width: 768px) {
   .feature-item {
     margin-bottom: 30px;
+  }
+  .herosection{
+    text-align: left;
+    margin-left: 0;
+  }
+  .image-hero{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 50px;
   }
 }
 .card-4{
@@ -582,7 +596,179 @@ button:hover {
   font-size: 18px;
 }
 
+.tree-info{
+  color: white;
+}
 
+
+
+.icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.mission-text {
+  font-size: 16px;
+}
+
+@media (max-width: 1200px){
+.image-hero{
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.herosection{
+  text-align: left;
+  margin-left: 100px;
+}
+.footer{
+  display: block !important;
+}
+.banner-1{
+  display: block !important;
+}
+}
+
+.banner {
+  background-color: #50543a;
+  font-family: sans-serif;
+  padding: 25px;
+  color: white;
+  font-size: 1.5rem;
+
+}
+.banner-1{
+  display: flex;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+.container {
+  max-width: 1250px;
+}
+.right-content{
+  letter-spacing: 3px;
+}
+.text{
+  letter-spacing: 3px;
+}
+
+
+.signup-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.title {
+  font-size: 18px;
+  color: #50543a;
+  margin-bottom: 20px;
+  font-weight: 600;
+  
+}
+
+.signup-form {
+  display: flex;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.signup-form .form-control {
+  border: none;
+  border-bottom: 3px solid #50543a;
+  border-radius: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #50543a;
+  font-weight: 500;
+  outline: none;
+  box-shadow: none; 
+}
+.signup-form .form-control:focus {
+border: 3px solid #50543a;
+outline: none;
+
+}
+
+.signup-form .form-control:focus {
+  outline: none;
+  border-bottom: 3px solid #50543a;
+}
+
+.signup-btn {
+  border: 2px solid #50543a;
+  background: transparent;
+  color: #50543a;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 380px;
+  font-weight: 700;
+}
+
+.signup-btn:hover {
+  background: #50543a;
+  border: 2px solid #50543a;
+  color: white;
+}
+.footer-side{
+  color: #50543a;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.title-footer{
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #50543a;
+}
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end;
+  gap: 15px; */
+  background-color: #5F6D48;
+  padding: 13px;
+}
+
+.social-icons a {
+  /* color: #333; */
+  font-size: 24px;
+  transition: 0.3s ease-in-out;
+  color: white;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+.card-1{
+  background-color: #636e4f;
+}
+.footer{
+  display: flex;
+}
+/* .values-section {
+  text-align: center;
+  padding: 50px 0;
+} */
+.values-section h3 {
+  color: #3d3d2a;
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-family: sans-serif;
+}
+.icon{
+  font-size: 45px;
+}
+.footer-text{
+  font-size: 13px;
+  font-family: sans-serif;
+}
 
 
 

@@ -72,10 +72,9 @@ export class AppComponent {
     'Twitch Profile Pictures', 'YouTube Channel Icons'
   ];
   socailIndustries: string[] = [
-    'Website Builder',
-    'Link in Bio',
-    'Digital Business Cards',
-    'Domain Names',
+    'mission & purpose',
+    'team',
+    'careers',
   ];
   moreItems: string[] = [
     'Email Signatures',

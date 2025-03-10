@@ -1,4 +1,4 @@
-<!-- Hero Section -->
+
 <header class="hero-section">
   <nav class="navbar navbar-expand-lg fixed-top custom-navbar" [ngClass]="{'scrolled': isScrolled}">
     <div class="menu-icon text-white  d-lg-none" (click)="toggleMenu()">☰</div>
@@ -44,19 +44,19 @@
             <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
               About
             </a>
-            <!-- <div class="dropdown-menu mega-menu menu-item-1">
+             <div class="dropdown-menu mega-menu menu-item-1 rounded-0 border-0">
             <div class="container">
               <div class="row">
                 <div class="col-md-12">
                   <div class="dropdown-row mt-1">
                     <ul>
-                      <li *ngFor="let keyword of socailIndustries" class="small fw-medium">{{ keyword }}</li>
+                      <li *ngFor="let keyword of socailIndustries" class="small fw-medium py-2">{{ keyword }}</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div> 
           </li>
         </ul>
 
@@ -122,7 +122,7 @@
 </header>
 
 <!-- card section -->
-<div class="card-1">
+<div class="card-4">
   <div class="container py-5">
     <div class="row">
       <!-- Card 1 -->
@@ -140,7 +140,7 @@
 
       <!-- Card 2 -->
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
-        <div class="custom-card">
+        <div class="custom-card py-7">
           <i class="fa-solid fa-key icon my-3"></i>
           <h3 class="card-title mt-4">built on time and on budget</h3>
           <p class="card-text mt-4">
@@ -213,7 +213,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-xxl-4 colxl-4 col-lg-4 col-md-12 col-sm-12">
+      <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12">
         <div class="image-hero">
           <img src="https://align.build/wp-content/uploads/2023/06/Copy-of-Davies_SkylineDR_34-1-609x1024.jpg" alt=""
             class="image-hero">
@@ -221,7 +221,7 @@
             class="image-hero"> -->
         </div>
       </div>
-      <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12">
+      <div class="col-xxl-7 col-xl-7 col-lg-10 col-md-12 col-sm-12 mt-8">
         <div class="herosection">
           <h2 class="fw-bold ">custom design, clarity and communication</h2>
           <p class="text-center mt-4 fw-medium">how we design your forever home</p>
@@ -266,12 +266,12 @@
 <div class="container-fluid mt-8">
   <div class="row align-items-center mx-6">
     <!-- Left Side - Image -->
-    <div class="col-md-6">
+    <div class=" col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12">
       <img src="https://align.build/wp-content/uploads/2021/05/i-img-15.jpg" class="image-hero-1" alt="Koala Image">
     </div>
 
     <!-- Right Side - Text Content -->
-    <div class="col-md-6">
+    <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 mt-6">
       <h1 class="title">environmentally designed sanctuaries</h1>
       <p class="subtitle">from concept to completion</p>
       <p>
@@ -287,7 +287,7 @@
         the world a better place, one home at a time.
       </p>
       <div class="d-flex justify-content-center align-items-center">
-        <button class="btn btn-outline-dark px-4 mt-4 button fw-medium rounded-0 px-3 button-hero-2">mission and
+        <button class="btn btn-outline-dark  px-4 mt-4 button fw-medium rounded-0 px-3 button-hero-2">mission and
           tree+house project</button>
       </div>
     </div>
@@ -299,9 +299,9 @@
     <div class="col-12">
       <div class="d-flex justify-content-center align-items-center">
         <img
-          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCABmAJADASIAAhEBAxEB/8QAGgABAAMBAQEAAAAAAAAAAAAAAAIEBQEDBv/EADMQAAICAgAEAwUFCQAAAAAAAAABAgMEEQUSMVETIUEVIjJhcRQzU4GSIyRScpGhscHR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A+zAAAAAAAAAAAAAAAAAOJqSTi00/VAdAAAAAAAAAAAAAAAAAAEbJxqg5zajFdWymsvJvW8bH1D0nY9b/ACGWvHzqMeX3aTnJd+xLMtnKccWh6smvOX8Me5BVyIX24ttluVGUYbThWvLfZs0MOHh4lUe0UVc2qGNwuVVa1vSXdvZeguWEY9loCQAKAAAAAAAAAAAELVN1TVT1PT5X8yYAzcbKzbquZV1S09Pb09k3mZVPvZGL7nrKD3ojCqDzMnFsW4W6sS6fX+/+CTrycPzqk76V1hL4l9GQMiXixrzcZqbr3td4+qPLByqErci62Ktsl5pvzS9EeE761LJ+zv8AZ208zj2e9FnIdWLw+qfhVys5Yxi5RXXXUiJJviGRCai1jVPmTa1zv/hoGJz4z+8y8i2fq4bSX0JU3W+Ko4l9sm+kLo7T/MtVsgoU8Rk71j3UONm9Ple0XygAAAAAAAAAAAAArZmNK7ksqlyXV/C/9M8llZmuR4bdnfm90sX5dONrxZqLfRdWVpcUqkuWiMp2t6jDWtkFXJ4fbCi292LxJec4xXlo7HCsycPx5S57tJwXokvQtfY7r4/vWRNb6wr8kvl8wuHzpjrHyrYa6KT2v6Eg7TxDG5FGb8Ga6wktaZCzLnlvwsLen5Sta0or5HFl1xbhxCuEbY+vLtSXdFinMxZ6jVbBdl0KJY2LXjQ1Bbb+KT6s9wCgAAAAAAAAAAByT5Yt9dLZ0AY2FlYsOa7IlzXzbbbi3r6Fv2ph73zvf8rLwIKXtXE/Ef6WPauJ+I/0sugChLiWFJpyltrpuD8jzuy+HXx1Yk/moNNGmAMzhuWnbLH8R2QS3XJrz12ZpgFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/2Q=="
+          src=""
           alt="Leaf Icon" class="icon-2">
-          <h5 class="fw-medium subtitle-icon mt-2">we believe in a future that is built to grow</h5>
+        <h5 class="fw-medium subtitle-icon mt-2">we believe in a future that is built to grow</h5>
       </div>
       <h5 class="main-text fw-medium">
         for every dream home designed with align <br>
@@ -321,32 +321,121 @@
   <!-- Top Section -->
   <div class="row text-center text-white">
     <!-- Left Section -->
-    <div class="col-md-6 section bg-image-left">
-      <h2 class="title">built projects</h2>
-      <p class="subtitle">
+    <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 section bg-image-left">
+      <h2 class="title text-white">built projects</h2>
+      <p class="subtitle text-white">
         where our clients' dream designs become a part of their reality
       </p>
-      <button class="btn btn-outline-light">explore projects</button>
+      <button class="btn btn-outline-light px-5 mt-4 button fw-bold rounded-0 px-3 button-hero-2">explore
+        projects</button>
     </div>
 
     <!-- Right Section -->
-    <div class="col-md-6 section bg-image-right">
-      <h2 class="title">dream home book</h2>
-      <p class="subtitle">
+    <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 section bg-image-right">
+      <h2 class="title text-white">dream home book</h2>
+      <p class="subtitle text-white">
         get your copy of our founder's field guide to designing and building your dream home.
       </p>
-      <button class="btn btn-outline-light">get your book</button>
+      <button class="btn btn-outline-light px-5 mt-4 button fw-bold rounded-0 px-3 button-hero-2">get your book</button>
     </div>
-  </div>
-
-  <!-- Bottom Section -->
-  <div class="footer-section">
-    <div class="tree-info">
-      <img src="assets/leaf-icon.png" class="icon" alt="Leaf Icon">
-      <span>16,348 trees planted</span>
+    <div class="banner">
+      <div class="container banner-1 justify-content-between">
+        <div class="left-content">
+          <i class="fas fa-seedling"></i>
+          <span class="text ms-2 ml-5">16,348 trees planted</span>
+        </div>
+        <div class="right-content fw-normal">
+          <span>our mission is to plant 1 million trees by 2050</span>
+        </div>
+      </div>
     </div>
-    <span class="mission-text">
-      our mission is to plant 1 million trees by 2050
-    </span>
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xxl-12 col-xl-12 col-lg-12 ccol-md-12 col-sm-12">
+      <div>
+        <div class="signup-section text-center mt-5">
+          <h2 class="title">
+            sign up for our 7 steps to building your dream home guide
+          </h2>
+          <form class="signup-form d-flex  justify-content-center align-items-center">
+            <input type="text" placeholder="Enter your name" class="form-control" />
+            <input type="email" placeholder="Enter your email" class="form-control" />
+            <button type="submit" class="btn signup-btn rounded-0">sign up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row mt-8 text-center">
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 mt-3">
+      <h6 class="title-footer mb-3 mx-4">Services</h6>
+      <ul class="list-unstyled mt-4">
+        <li class="my-2 fw-medium"><a href="#" class="text-decoration-none footer-side">project possibilities</a></li>
+        <li><a href="#" class="text-decoration-none footer-side">home design</a></li>
+      </ul>
+    </div>
+    <!-- seccond -->
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 mt-3">
+      <h6 class="title-footer mb-3 mx-4">learn</h6>
+      <ul class="list-unstyled mx-3 mt-4">
+        <li class="my-2 fw-medium"><a href="#" class="text-decoration-none footer-side">dream home evaluation</a></li>
+        <li><a href="#" class="text-decoration-none footer-side">design journal & articles</a></li>
+        <li class="my-2 fw-medium"><a href="#" class="text-decoration-none footer-side">dream home workshop</a></li>
+        <li><a href="#" class="text-decoration-none footer-side">dream home book</a></li>
+      </ul>
+    </div>
+    <!-- third column -->
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 mt-3">
+      <h6 class="title-footer mb-3 mx-4">about</h6>
+      <ul class="list-unstyled mx-3 mt-4">
+        <li class="my-2 fw-medium"><a href="#" class="text-decoration-none footer-side">mission & purpose</a></li>
+        <li><a href="#" class="text-decoration-none footer-side">team</a></li>
+        <li class="my-2 fw-medium"><a href="#" class="text-decoration-none footer-side">careers</a></li>
+      </ul>
+    </div>
+    <!-- forth column -->
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 mt-3">
+      <h6 class="title-footer mb-3 ml-6">contact us</h6>
+      <ul class="list-unstyled mx-3 mt-4">
+        <div>
+          <li class="my-2 fw-medium"><a href="#" class="text-decoration-none footer-side">0409 169 081</a></li>
+          <li><a href="#" class="text-decoration-none footer-side">helloalign.build</a></li>
+          <li class="my-2 fw-medium"><a href="#" class="text-decoration-none footer-side">Career Opportunities</a></li>
+        </div>
+        <!-- <div class="text-end social-icons ms-auto text-white">
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook my-2"></i></a>
+          <a href="https://www.primevideo.com" target="_blank"><i class="fas fa-play-circle"></i></a>
+        </div> -->
+      </ul>
+    </div>
+  </div>
+</div>
+ <div class="card-1 mt-5">
+<div class="container  values-section">
+  <h3 class="fw-medium text-center py-4">our values</h3>
+  <div class="row text-center align-items-center justify-content-center mt-4">
+    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-3">
+      <i class="fa-solid fa-hard-drive fw-medium text-white icon"></i>
+        <h6 class="mt-4 text-center fw-medium text-white">be bold</h6>
+    </div>
+    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-3">
+      <i class="fa-solid fa-earth-americas text-white icon"></i>
+        <h6 class="mt-4 text-center fw-medium text-white">have fun</h6>
+    </div>
+    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-3">
+      <i class="fa-solid fa-snowflake fw-medium text-white icon"></i>
+        <h6 class="mt-4 text-center fw-medium text-white">align for good</h6>
+    </div>
+  </div>
+</div>
+<hr class="text-white mx-4">
+<div class="footer p-1">
+  <h4 class="text-white fw-normal ml-5 mt-3">align</h4>
+  <p class="ms-auto text-white footer-text mx-8 fw-medium mt-3">© 2025 align.build | All rights reserved | <a href="#" class="text-white">Terms & Privacy</a></p>
+</div>
+</div> 
