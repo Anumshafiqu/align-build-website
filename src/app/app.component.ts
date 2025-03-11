@@ -76,6 +76,16 @@ export class AppComponent {
     'team',
     'careers',
   ];
+  starthere: string[] = [
+    'home design',
+  ];
+  learnabout: string[] = [
+    'dream home evulation',
+    'design journal & articles',
+    'dream home workshop',
+    'dream home book',
+  ];
+
   moreItems: string[] = [
     'Email Signatures',
     'Letterheads',

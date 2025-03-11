@@ -1,7 +1,6 @@
-
 <header class="hero-section">
-  <nav class="navbar navbar-expand-lg fixed-top custom-navbar" [ngClass]="{'scrolled': isScrolled}">
-    <div class="menu-icon text-white  d-lg-none" (click)="toggleMenu()">☰</div>
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar text-dark" [ngClass]="{'scrolled': isScrolled}">
+    <div class="menu-icon text-dark  d-lg-none" (click)="toggleMenu()">☰</div>
     <a class="navbar-brand mx-6" href="#">align</a>
     <div class="menu-container" *ngIf="isMenuOpen">
       <div class="d-flex ">
@@ -13,57 +12,84 @@
             aria-hidden="true"></i></button>
       </div>
       <ul class="mt-4">
-        <li *ngFor="let item of currentMenu" (click)="navigateTo(item)" class="icon-child ">
+        <li *ngFor="let item of currentMenu" (click)="navigateTo(item)" class="icon-child text-dark">
           {{ item.label }}
           <span *ngIf="item.children">›</span>
         </li>
       </ul>
     </div>
     <div class="container">
-
       <div class="collapse navbar-collapse ml-8" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item position-static">
-            <a class="nav-link fw-bold mx-2 card-2" href="#">Projects</a>
+          <li class="nav-item dropdown p-2 position-static">
+            <a class="nav-link fw-bold mx-2 card-2 dropdown-toggle text-white" href="#" role="button"
+              data-bs-toggle="dropdown">Projects</a>
+            <div class="dropdown-menu mega-menu menu-item-2 rounded-0 border-0">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="dropdown-row mt-1">
+                      <ul>
+                        <li *ngFor="let keyword of starthere" class="small fw-medium py-2">{{ keyword }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="nav-item dropdown position-static">
-            <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
+          <li class="nav-item position-static mt-2">
+            <a class="nav-link text-white mx-2 card-2" href="#">
               services
             </a>
           </li>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item dropdown position-static">
-                <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
+                <a class="nav-link dropdown-toggle mx-2 card-2 text-white" href="#" role="button"
+                  data-bs-toggle="dropdown">
                   Learn
                 </a>
+                <div class="dropdown-menu mega-menu menu-item-3 pl-2 rounded-0 border-0">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="dropdown-row mt-1">
+                          <ul>
+                            <li *ngFor="let keyword of learnabout" class="small fw-medium py-2">{{ keyword }}</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
-          <li class="nav-item dropdown position-static">
-            <a class="nav-link dropdown-toggle mx-2 card-2" href="#" role="button" data-bs-toggle="dropdown">
+          <li class="nav-item dropdown position-static mt-2">
+            <a class="nav-link dropdown-toggle mx-2 card-2 text-white" href="#" role="button" data-bs-toggle="dropdown">
               About
             </a>
-             <div class="dropdown-menu mega-menu menu-item-1 rounded-0 border-0">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="dropdown-row mt-1">
-                    <ul>
-                      <li *ngFor="let keyword of socailIndustries" class="small fw-medium py-2">{{ keyword }}</li>
-                    </ul>
+            <div class="dropdown-menu mega-menu menu-item-1 rounded-0 border-0">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="dropdown-row mt-1">
+                      <ul>
+                        <li *ngFor="let keyword of socailIndustries" class="small fw-medium py-2">{{ keyword }}</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div> 
           </li>
         </ul>
 
 
         <div class="ml-auto">
           <button type="button"
-            class="btn btn-outline-light button text-white fw-bold border-2 border-white rounded-0 px-4">Book a quick
+            class="btn btn-outline-light button text-white fw-bold border-2 border-white rounded-0 px-4" [ngClass]="{'scrolled-btn': isScrolled}">Book a quick
             chat</button>
         </div>
       </div>
@@ -298,9 +324,7 @@
   <div class="row">
     <div class="col-12">
       <div class="d-flex justify-content-center align-items-center">
-        <img
-          src=""
-          alt="Leaf Icon" class="icon-2">
+        <img src="" alt="Leaf Icon" class="icon-2">
         <h5 class="fw-medium subtitle-icon mt-2">we believe in a future that is built to grow</h5>
       </div>
       <h5 class="main-text fw-medium">
@@ -415,27 +439,28 @@
     </div>
   </div>
 </div>
- <div class="card-1 mt-5">
-<div class="container  values-section">
-  <h3 class="fw-medium text-center py-4">our values</h3>
-  <div class="row text-center align-items-center justify-content-center mt-4">
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-3">
-      <i class="fa-solid fa-hard-drive fw-medium text-white icon"></i>
+<div class="card-1 mt-5">
+  <div class="container  values-section">
+    <h3 class="fw-medium text-center py-4">our values</h3>
+    <div class="row text-center align-items-center justify-content-center mt-4">
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-3">
+        <i class="fa-solid fa-hard-drive fw-medium text-white icon"></i>
         <h6 class="mt-4 text-center fw-medium text-white">be bold</h6>
-    </div>
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-3">
-      <i class="fa-solid fa-earth-americas text-white icon"></i>
+      </div>
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-3">
+        <i class="fa-solid fa-earth-americas text-white icon"></i>
         <h6 class="mt-4 text-center fw-medium text-white">have fun</h6>
-    </div>
-    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-3">
-      <i class="fa-solid fa-snowflake fw-medium text-white icon"></i>
+      </div>
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-3">
+        <i class="fa-solid fa-snowflake fw-medium text-white icon"></i>
         <h6 class="mt-4 text-center fw-medium text-white">align for good</h6>
+      </div>
     </div>
   </div>
+  <hr class="text-white mx-4">
+  <div class="footer p-1">
+    <h4 class="text-white fw-normal ml-5 mt-3">align</h4>
+    <p class="ms-auto text-white footer-text mx-8 fw-medium mt-3">© 2025 align.build | All rights reserved | <a href="#"
+        class="text-white">Terms & Privacy</a></p>
+  </div>
 </div>
-<hr class="text-white mx-4">
-<div class="footer p-1">
-  <h4 class="text-white fw-normal ml-5 mt-3">align</h4>
-  <p class="ms-auto text-white footer-text mx-8 fw-medium mt-3">© 2025 align.build | All rights reserved | <a href="#" class="text-white">Terms & Privacy</a></p>
-</div>
-</div> 
