@@ -1,5 +1,5 @@
-<header class="hero-section">
-  <nav class="navbar navbar-expand-lg fixed-top custom-navbar text-dark" [ngClass]="{'scrolled': isScrolled}">
+<!-- <header class="hero-section"> -->
+  <!-- <nav class="navbar navbar-expand-lg fixed-top custom-navbar text-dark" [ngClass]="{'scrolled': isScrolled}">
     <div class="menu-icon text-dark  d-lg-none" (click)="toggleMenu()">☰</div>
     <a class="navbar-brand mx-6" href="#">align</a>
     <div class="menu-container" *ngIf="isMenuOpen">
@@ -7,16 +7,6 @@
         <button class="close-btn mt-2 ml-auto icon-child-1 small fs-6" (click)="toggleMenu()"><i class="fa fa-close"
             aria-hidden="true"></i></button>
       </div>
-      <div *ngIf="menuStack.length > 0" class="menu-header ml-4 fw-bold fs-6">
-        <button (click)="goBack()" class="fw-bold small mt-2"><i class="fa fa-chevron-left"
-            aria-hidden="true"></i></button>
-      </div>
-      <ul class="mt-4">
-        <li *ngFor="let item of currentMenu" (click)="navigateTo(item)" class="icon-child text-dark">
-          {{ item.label }}
-          <span *ngIf="item.children">›</span>
-        </li>
-      </ul>
     </div>
     <div class="container">
       <div class="collapse navbar-collapse ml-8" id="navbarNav">
@@ -94,65 +84,244 @@
         </div>
       </div>
     </div>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container">
-      <a class="navbar-brand" href="#">align®</a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  </nav> -->
   
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">projects</a>
-          </li>
+
+
+
+
+
+
+
+
+
+  <!-- <header class="hero-section">
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar text-dark" [ngClass]="{'scrolled': isScrolled}">
+      <div class="menu-icon text-dark d-lg-none" (click)="toggleMenu()">☰</div>
+ 
+      <a class="navbar-brand mx-6" href="#">align</a>
+      <div class="menu-container sidebar" [ngClass]="{'open': isMenuOpen}">
+        <div class="d-flex justify-content-between align-items-center p-3">
+          <h5 class="mb-0">Menu</h5>
+          <button class="close-btn btn btn-light" (click)="toggleMenu()">
+            <i class="fa fa-close"></i>
+          </button>
+        </div>
   
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown">services</a>
-            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="#">Service 1</a></li>
-              <li><a class="dropdown-item" href="#">Service 2</a></li>
-            </ul>
-          </li>
-  
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="learnDropdown">learn</a>
-            <ul class="dropdown-menu" aria-labelledby="learnDropdown">
-              <li><a class="dropdown-item" href="#">Learn 1</a></li>
-              <li><a class="dropdown-item" href="#">Learn 2</a></li>
-            </ul>
-          </li>
-  
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown">about</a>
-            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item" href="#">About 1</a></li>
-              <li><a class="dropdown-item" href="#">About 2</a></li>
-            </ul>
-          </li>
-  
-          <li class="nav-item">
-            <a class="nav-link btn btn-success text-white px-3" href="#">book a quick chat</a>
+        <ul class="list-unstyled px-3">
+          <li *ngFor="let item of menuItems" (click)="navigateTo(item)" class="py-2 border-bottom">
+            {{ item.label }}
           </li>
         </ul>
       </div>
-    </div>
-  </nav> -->
+      <div class="menu-overlay" *ngIf="isMenuOpen" (click)="toggleMenu()"></div>
+  
+      <div class="container">
+        <div class="collapse navbar-collapse ml-8" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown p-2 position-static">
+              <a class="nav-link fw-bold mx-2 dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                Projects
+              </a>
+              <div class="dropdown-menu mega-menu menu-item-2 rounded-0 border-0">
+                <ul>
+                  <li *ngFor="let keyword of starthere" class="small fw-medium py-2">{{ keyword }}</li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item position-static mt-2">
+              <a class="nav-link text-white mx-2" href="#">Services</a>
+            </li>
+            <li class="nav-item dropdown position-static">
+              <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown">
+                Learn
+              </a>
+              <div class="dropdown-menu mega-menu menu-item-3 rounded-0 border-0">
+                <ul>
+                  <li *ngFor="let keyword of learnabout" class="small fw-medium py-2">{{ keyword }}</li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item dropdown position-static mt-2">
+              <a class="nav-link dropdown-toggle mx-2 text-white" href="#" role="button" data-bs-toggle="dropdown">
+                About
+              </a>
+              <div class="dropdown-menu mega-menu menu-item-1 rounded-0 border-0">
+                <ul>
+                  <li *ngFor="let keyword of socailIndustries" class="small fw-medium py-2">{{ keyword }}</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="ml-auto">
+            <button type="button" class="btn btn-outline-light text-white fw-bold border-2 border-white rounded-0 px-4">
+              Book a quick chat
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header> -->
+  
 
-  </nav>
-  <!-- Hero Content -->
-  <div class="hero-content">
+
+
+
+
+  
+  
+
+
+  
+  
+  
+
+  <header class="hero-section">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar text-dark" [ngClass]="{'scrolled': isScrolled}">
+      <div class="menu-icon text-dark d-lg-none" (click)="toggleMenu()">☰</div>
+  
+      <a class="navbar-brand mx-6" href="#">align</a>
+  
+      <!-- Sidebar Menu (Opens from Left) -->
+      <div class="sidebar" [ngClass]="{'open': isMenuOpen}">
+        <div class="d-flex justify-content-end">
+          <button class="close-btn mt-2 ml-auto small fs-6" (click)="toggleMenu()">
+            <i class="fa fa-close"></i>
+          </button>
+        </div>
+        <ul class="sidebar-nav">
+          <li><a href="#">Start Here</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">About</a></li>
+          <li><button class="btn btn-outline-dark">Contact Us</button></li>
+        </ul>
+      </div>
+  
+      <!-- Main Navbar Menu -->
+      <div class="container">
+        <div class="collapse navbar-collapse ml-8" id="navbarNav">
+          <ul class="navbar-nav">
+            <!-- Projects Dropdown -->
+            <li class="nav-item dropdown p-2 position-static">
+              <a class="nav-link fw-bold mx-2 card-2 dropdown-toggle text-white" href="#" role="button"
+                data-bs-toggle="dropdown">Projects</a>
+              <div class="dropdown-menu mega-menu menu-item-2 rounded-0 border-0">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="dropdown-row mt-1">
+                        <ul>
+                          <li *ngFor="let keyword of starthere" class="small fw-medium py-2">{{ keyword }}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+  
+            <!-- Services -->
+            <li class="nav-item position-static mt-2">
+              <a class="nav-link text-white mx-2 card-2" href="#">Services</a>
+            </li>
+  
+            <!-- Learn Dropdown -->
+            <li class="nav-item dropdown position-static mt-2">
+              <a class="nav-link dropdown-toggle mx-2 card-2 text-white" href="#" role="button" data-bs-toggle="dropdown">
+                Learn
+              </a>
+              <div class="dropdown-menu mega-menu menu-item-3 pl-2 rounded-0 border-0">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="dropdown-row mt-1">
+                        <ul>
+                          <li *ngFor="let keyword of learnabout" class="small fw-medium py-2">{{ keyword }}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+  
+            <!-- About Dropdown -->
+            <li class="nav-item dropdown position-static mt-2">
+              <a class="nav-link dropdown-toggle mx-2 card-2 text-white" href="#" role="button" data-bs-toggle="dropdown">
+                About
+              </a>
+              <div class="dropdown-menu mega-menu menu-item-1 rounded-0 border-0">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="dropdown-row mt-1">
+                        <ul>
+                          <li *ngFor="let keyword of socailIndustries" class="small fw-medium py-2">{{ keyword }}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+  
+          <!-- Right-side Button -->
+          <div class="ml-auto">
+            <button type="button" class="btn btn-outline-light button text-white fw-bold border-2 border-white rounded-0 px-4"
+              [ngClass]="{'scrolled-btn': isScrolled}">
+              Book a quick chat
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h1>high-quality, unique, healthy homes</h1>
+    </div>
+  </header>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="hero-content">
     <h1>high-quality, unique, healthy homes</h1>
   </div>
-</header>
+</header> -->
 
 <!-- card section -->
+
 <div class="card-4">
   <div class="container py-5">
     <div class="row">
       <!-- Card 1 -->
+      
       <div class=" col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
+        <p-card>
         <div class="custom-card">
           <i class="fa-regular fa-heart icon my-3"></i>
           <h3 class="card-title text-center mt-4">designed around <br> your lifestyle</h3>
@@ -162,10 +331,14 @@
           </p>
           <a href="#" class="read-more">read more</a>
         </div>
+      </p-card>
       </div>
+   
 
       <!-- Card 2 -->
+      
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
+        <p-card>
         <div class="custom-card py-7">
           <i class="fa-solid fa-key icon my-3"></i>
           <h3 class="card-title mt-4">built on time and on budget</h3>
@@ -174,10 +347,13 @@
           </p>
           <a href="#" class="read-more">read more</a>
         </div>
+      </p-card>
       </div>
-
+   
       <!-- Card 3 -->
+       
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
+        <p-card>
         <div class="custom-card">
           <i class="fa-solid fa-tree icon my-3"></i>
           <h3 class="card-title text-center mt-4">making the world better one home at a time</h3>
@@ -187,7 +363,9 @@
           </p>
           <a href="#" class="read-more">read more</a>
         </div>
+      </p-card>
       </div>
+  
     </div>
   </div>
 
@@ -206,15 +384,17 @@
       <div class="container text-center feature-section">
         <div class="row">
           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 feature-item border-left">
+            <p-card>
             <i class="fa fa-user icon" aria-hidden="true"></i>
             <h3 class="mt-4 fw-medium mt-4">quality control</h3>
             <p class="card-4 text-left mt-4">In most builds, the devil is in the detail. Vague and imprecise plans force
               builders to make decisions on-site that can take the design off track.</p>
             <p class="card-4 text-left">The Aligned Home® process uses the BuildPrint - which details each and every
               variable and takes out all the surprises.</p>
-
+            </p-card>
           </div>
           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 feature-item">
+            <p-card>
             <i class="fa fa-home icon" aria-hidden="true"></i>
             <h3 class="mt-4 fw-medium mt-4">built on time and on budget</h3>
             <p class="card-4 text-left mt-4"> Custom-designed building projects are notorious for running over time and
@@ -222,8 +402,10 @@
             <p class="card-4 text-left">Our 'Architect-Builder-Client Model' allows for all costs from the start, so we
               can provide an accurate estimated project budget. This enables your builder to provide a fixed-price
               construction quote.</p>
+            </p-card>
           </div>
           <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 feature-item">
+            <p-card>
             <i class="fa fa-user-secret icon" aria-hidden="true"></i>
             <h3 class="mt-4 fw-medium mt-4">design overwhelm</h3>
             <p class="card-4 text-left mt-4">Designing a home is a project with 1001 moving parts. Each decision unpacks
@@ -231,6 +413,7 @@
             <p class="card-4 text-left">Our design team will guide you through our three-stage design process, using our
               six-element method. Your architect, interior designer, and builder will work with you on all decisions
               from start to finish.</p>
+            </p-card>
           </div>
         </div>
       </div>
@@ -248,6 +431,7 @@
         </div>
       </div>
       <div class="col-xxl-7 col-xl-7 col-lg-10 col-md-12 col-sm-12 mt-8">
+        <p-card>
         <div class="herosection">
           <h2 class="fw-bold ">custom design, clarity and communication</h2>
           <p class="text-center mt-4 fw-medium">how we design your forever home</p>
@@ -262,6 +446,7 @@
               methodology</button>
           </div>
         </div>
+      </p-card>
       </div>
 
     </div>
@@ -298,6 +483,7 @@
 
     <!-- Right Side - Text Content -->
     <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 mt-6">
+      <p-card>
       <h1 class="title">environmentally designed sanctuaries</h1>
       <p class="subtitle">from concept to completion</p>
       <p>
@@ -316,6 +502,7 @@
         <button class="btn btn-outline-dark  px-4 mt-4 button fw-medium rounded-0 px-3 button-hero-2">mission and
           tree+house project</button>
       </div>
+    </p-card>
     </div>
   </div>
 </div>
@@ -323,6 +510,7 @@
 <div class="container text-center my-5">
   <div class="row">
     <div class="col-12">
+      <p-card>
       <div class="d-flex justify-content-center align-items-center">
         <img src="" alt="Leaf Icon" class="icon-2">
         <h5 class="fw-medium subtitle-icon mt-2">we believe in a future that is built to grow</h5>
@@ -337,6 +525,7 @@
         for every dream home built, <br>
         <span class="bold-text">500 trees are planted.</span>
       </h5>
+    </p-card>
     </div>
   </div>
 </div>
@@ -346,21 +535,25 @@
   <div class="row text-center text-white">
     <!-- Left Section -->
     <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 section bg-image-left">
+      <p-card>
       <h2 class="title text-white">built projects</h2>
       <p class="subtitle text-white">
         where our clients' dream designs become a part of their reality
       </p>
-      <button class="btn btn-outline-light px-5 mt-4 button fw-bold rounded-0 px-3 button-hero-2">explore
+      <button class="btn btn-outline-light px-5 mt-4 button fw-bold rounded-0 px-3 button-hero-2 w-75">explore
         projects</button>
+      </p-card>
     </div>
 
     <!-- Right Section -->
     <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 section bg-image-right">
+      <p-card>
       <h2 class="title text-white">dream home book</h2>
       <p class="subtitle text-white">
         get your copy of our founder's field guide to designing and building your dream home.
       </p>
-      <button class="btn btn-outline-light px-5 mt-4 button fw-bold rounded-0 px-3 button-hero-2">get your book</button>
+      <button class="btn btn-outline-light px-5 mt-4 button fw-bold rounded-0 px-3 button-hero-2 w-75">get your book</button>
+    </p-card>
     </div>
     <div class="banner">
       <div class="container banner-1 justify-content-between">

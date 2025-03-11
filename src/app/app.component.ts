@@ -187,19 +187,20 @@ export class AppComponent {
 
 
   mobileMenuOpen = false;
-  menuItems = [
-    { name: 'Logos', open: false },
-    { name: 'Business Cards', open: false },
-    { name: 'Websites', open: false },
-    { name: 'AI', open: false }
-  ];
+  // menuItems = [
+  //   { name: 'Logos', open: false },
+  //   { name: 'Business Cards', open: false },
+  //   { name: 'Websites', open: false },
+  //   { name: 'AI', open: false }
+  // ];
 
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
 
-  toggleDropdown(item: any) {
-    item.open = !item.open;
+  toggleDropdown( menu: string) {
+    // item.open = !item.open;
+    this.dropdownOpen = this.dropdownOpen === menu ? null : menu;
   }
 
 
@@ -391,6 +392,7 @@ export class AppComponent {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen; // Show or hide menu
+    this.isSidebarOpen = !this.isSidebarOpen;
   }
 
   navigateTo(item: MenuItem) {
@@ -416,6 +418,18 @@ export class AppComponent {
   }
   hover: boolean = false;
   scrolled: boolean = false;
+
+  isSidebarOpen = false;
+  dropdownOpen: string | null = null;
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
+  // toggleDropdown(menu: string) {
+  //   this.dropdownOpen = this.dropdownOpen === menu ? null : menu;
+  // }
+
 
 
 }
