@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CardModule } from 'primeng/card';
     HttpClientModule,
     CommonModule,
     CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
