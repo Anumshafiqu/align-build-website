@@ -17,7 +17,7 @@ body {
   background-color: #2c2c2c !important;
   color: white !important;
 }
-.dark-theme p {
+.dark-theme p, h1, h2,h3,h4 {
   color: #f5f5f5;
 }
 /* Dark Mode for Buttons */
