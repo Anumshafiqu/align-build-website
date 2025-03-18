@@ -429,30 +429,9 @@ export class AppComponent {
   // toggleDropdown(menu: string) {
   //   this.dropdownOpen = this.dropdownOpen === menu ? null : menu;
   // }
-  isDarkMode = false;
+ 
 
-  constructor(private renderer: Renderer2) {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      this.isDarkMode = true;
-      this.applyDarkTheme(true);
-    }
-  }
 
-  toggleTheme() {
-    this.isDarkMode = !this.isDarkMode;
-    this.applyDarkTheme(this.isDarkMode);
-  }
-
-  applyDarkTheme(enableDark: boolean) {
-    if (enableDark) {
-      this.renderer.addClass(document.documentElement, 'dark-theme'); // Apply to HTML
-      localStorage.setItem('theme', 'dark');
-    } else {
-      this.renderer.removeClass(document.documentElement, 'dark-theme');
-      localStorage.setItem('theme', 'light');
-    }
-  }
 
 
 
