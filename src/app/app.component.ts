@@ -430,6 +430,28 @@ export class AppComponent {
   //   this.dropdownOpen = this.dropdownOpen === menu ? null : menu;
   // }
  
+  isDarkMode = false;
+
+  constructor(private renderer: Renderer2) {
+    // Check if dark mode was enabled previously
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      this.isDarkMode = true;
+      this.renderer.addClass(document.body, 'dark-theme');
+    }
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    if (this.isDarkMode) {
+      this.renderer.addClass(document.body, 'dark-theme');
+      localStorage.setItem('theme', 'dark'); // Save the preference
+    } else {
+      this.renderer.removeClass(document.body, 'dark-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  }
+  
 
 
 

@@ -1,44 +1,36 @@
-/* Default Light Theme */
-body, html {
-  background-color: white;
-  color: black;
+/* Light Theme (Default) */
+body {
+  background-color: #f5f5f5; /* Light Gray */
+  color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Dark Theme */
-.dark-theme, .dark-theme body, .dark-theme html {
-  background-color: #121212 !important;
+.dark-theme {
+  background-color: #1e1e1e !important; /* Dark Background */
+  color: #ddd !important;
+}
+
+/* Apply Dark Mode to Navbar, Footer, and Other Elements */
+
+.dark-theme .card{
+  background-color: #2c2c2c !important;
   color: white !important;
 }
-
-/* Apply Dark Mode to Common Elements */
-.dark-theme a {
-  color: #bb86fc; /* Light purple for links */
+.dark-theme p {
+  color: #f5f5f5;
 }
-
-
-.dark-theme .container, 
-.dark-theme .content,  
-.dark-theme .section {
-  /* background-color: #1e1e1e !important; */
+/* Dark Mode for Buttons */
+/* .dark-theme .btn {
+  background-color: #444 !important;
   color: white !important;
-  /* border: 1px solid #333; */
+} */
+
+/* Change Theme Toggle Icon Color */
+.theme-toggle-btn i {
+  color: black; /* Default Light Mode */
 }
 
-/* Inputs, Buttons, and Forms */
-.dark-theme .card
-.dark-theme textarea,
-.dark-theme select {
-  background-color: #222 !important;
-  color: white !important;
-  border: 1px solid #444 !important;
-}
-
-/* PrimeNG Components */
-.dark-theme p-table, 
-.dark-theme p-dialog, 
-.dark-theme p-panel {
-  background-color: #1e1e1e !important;
-  color: white !important;
-  /* border: 1px solid #333 !important; */
-}
+/* .dark-theme .theme-toggle-btn i {
+  color: yellow;
+} */
