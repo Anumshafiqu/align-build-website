@@ -95,6 +95,24 @@ body.dark-mode .btn-outline-light {
 .navbar {
   transition: background-color 0.3s ease-in-out;
 }
+.dark-mode {
+  color: white !important;
+}
+.dark-mode .card-3, .card-text , p , h3 , h2 , .title , .subtitle-icon , h5 , span , input , h6 , .footer-side , a{
+  color: white !important;
+}
 
+.dark-mode footer {
+  color: #aaa !important; 
+}
+.dark-mode .btn-outline-dark{
+  color: white;
+  border: 1px solid white;
+}
 
+.dark-mode button,
+.dark-mode .btn {
+  color: white !important;
+  border-color: white !important;
+}
 
