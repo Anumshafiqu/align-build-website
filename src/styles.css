@@ -1,36 +1,100 @@
-/* Light Theme (Default) */
-body {
-  background-color: #f5f5f5; /* Light Gray */
-  color: #333;
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Dark mode styling for the entire app */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-/* Dark Theme */
-.dark-theme {
-  background-color: #1e1e1e !important; /* Dark Background */
-  color: #ddd !important;
+body.dark-mode a {
+  color: white;
 }
 
-/* Apply Dark Mode to Navbar, Footer, and Other Elements */
+/* Navbar dark mode styling */
+body.dark-mode p, h1,h2,a {
+  /* background-color: #1e1e1e; */
+  color: white;
+}
 
-.dark-theme .card{
-  background-color: #2c2c2c !important;
+/* Card dark mode styling */
+body.dark-mode .card , navbar {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+/* Additional styling for input fields, buttons, etc. */
+body.dark-mode .form-control,
+body.dark-mode {
+  background-color: #333;
+  color: #ffffff;
+  border-color: #444;
+}
+
+body.dark-mode .btn-outline-light {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+
+
+
+
+/* Dark mode styles */
+.my-app-dark {
+  background-color: #1e1e1e; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+
+.my-app-dark .card-2 h6, 
+.my-app-dark .card-2 h4, 
+.my-app-dark .card-2 p {
   color: white !important;
 }
-.dark-theme p, h1, h2,h3,h4 {
-  color: #f5f5f5;
+
+
+/* Fix icon colors */
+.my-app-dark .icon {
+  color: #ffffff !important;
 }
-/* Dark Mode for Buttons */
-/* .dark-theme .btn {
-  background-color: #444 !important;
+
+
+/* Default Light Navbar */
+.navbar-light {
+  background-color: #ffffff !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+  color: black !important;
+}
+
+/* Dark Navbar */
+.navbar-dark {
+  background-color: #222 !important;
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
   color: white !important;
-} */
-
-/* Change Theme Toggle Icon Color */
-.theme-toggle-btn i {
-  color: black; /* Default Light Mode */
 }
 
-/* .dark-theme .theme-toggle-btn i {
-  color: yellow;
-} */
+/* Dark Mode Toggle Button */
+.btn-dark {
+  background-color: #222;
+  border: none;
+  color: white;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  border: none;
+  color: black;
+}
+
+/* Fix navbar position */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+

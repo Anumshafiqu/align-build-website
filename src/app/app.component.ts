@@ -1,4 +1,5 @@
 import { Component, HostListener , Renderer2} from '@angular/core';
+
 interface MenuItem {
   label: string;
   children?: MenuItem[];
@@ -430,28 +431,52 @@ export class AppComponent {
   //   this.dropdownOpen = this.dropdownOpen === menu ? null : menu;
   // }
  
+  // isDarkMode = false;
+
+  // toggleTheme() {
+  //   this.isDarkMode = !this.isDarkMode;
+  //   if (this.isDarkMode) {
+  //     this.renderer.addClass(document.body, 'dark-theme');
+  //     localStorage.setItem('theme', 'dark'); // Save the preference
+  //   } else {
+  //     this.renderer.removeClass(document.body, 'dark-theme');
+  //     localStorage.setItem('theme', 'light');
+  //   }
+  // }
+  
+
+
+  constructor(private renderer: Renderer2) {}
+  changeTheme(theme: string) {
+    let themeLink = document.getElementById('theme-link') as HTMLLinkElement;
+    themeLink.href = `assets/themes/${theme}/theme.css`;
+  }
+
+
+
   isDarkMode = false;
 
-  constructor(private renderer: Renderer2) {
-    // Check if dark mode was enabled previously
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      this.isDarkMode = true;
-      this.renderer.addClass(document.body, 'dark-theme');
+ 
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+
+    if (this.isDarkMode) {
+      this.renderer.addClass(document.body, 'dark-mode');
+    } else {
+      this.renderer.removeClass(document.body, 'dark-mode');
     }
+  }
+  isSearchOpen = false;
+
+  toggleSearch() {
+    this.isSearchOpen = !this.isSearchOpen;
   }
 
-  toggleTheme() {
-    this.isDarkMode = !this.isDarkMode;
-    if (this.isDarkMode) {
-      this.renderer.addClass(document.body, 'dark-theme');
-      localStorage.setItem('theme', 'dark'); // Save the preference
-    } else {
-      this.renderer.removeClass(document.body, 'dark-theme');
-      localStorage.setItem('theme', 'light');
-    }
-  }
+
+
   
+  
+
 
 
 

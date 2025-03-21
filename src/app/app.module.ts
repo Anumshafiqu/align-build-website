@@ -9,6 +9,8 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,9 +21,10 @@ import { ButtonModule } from 'primeng/button';
     HttpClientModule,
     CommonModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -837,9 +837,9 @@ outline: none;
 .social-icons a:hover {
   color: white;
 }
-.card-1{
+/* .card-1{
   background-color: #636e4f;
-}
+} */
 .footer{
   display: flex;
 }
@@ -862,7 +862,9 @@ outline: none;
 }
 
 
-
+.icon-1{
+  font-size: 45px;
+}
 
 
 /* Navbar */
@@ -994,3 +996,11 @@ border: none;
 li{
   list-style: none;
 }
+
+
+
+
+
+
+
+
