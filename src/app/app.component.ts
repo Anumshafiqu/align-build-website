@@ -454,27 +454,47 @@ export class AppComponent {
 
 
 
-  isDarkMode = false;
+  // isDarkMode = false;
 
  
-  toggleDarkMode() {
-    this.isDarkMode = !this.isDarkMode;
+  // toggleDarkMode() {
+  //   this.isDarkMode = !this.isDarkMode;
 
-    if (this.isDarkMode) {
-      this.renderer.addClass(document.body, 'dark-mode');
-    } else {
-      this.renderer.removeClass(document.body, 'dark-mode');
+  //   if (this.isDarkMode) {
+  //     this.renderer.addClass(document.body, 'dark-mode');
+  //   } else {
+  //     this.renderer.removeClass(document.body, 'dark-mode');
+  //   }
+  // }
+  // isSearchOpen = false;
+
+  // toggleSearch() {
+  //   this.isSearchOpen = !this.isSearchOpen;
+  // }
+
+
+
+  isDarkMode = false; 
+
+  ngOnInit() {
+    // Check Local Storage for Theme
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') {
+      this.isDarkMode = true;
+      document.body.classList.add('dark-mode');
     }
   }
-  isSearchOpen = false;
 
-  toggleSearch() {
-    this.isSearchOpen = !this.isSearchOpen;
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    if (this.isDarkMode) {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
   }
-
-
-
-  
   
 
 

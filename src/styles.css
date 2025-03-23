@@ -1,5 +1,5 @@
-/* Dark mode styling for the entire app */
-body.dark-mode {
+
+/* body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
@@ -7,20 +7,13 @@ body.dark-mode {
 body.dark-mode a {
   color: white;
 }
-
-/* Navbar dark mode styling */
 body.dark-mode p, h1,h2,a {
-  /* background-color: #1e1e1e; */
   color: white;
 }
-
-/* Card dark mode styling */
 body.dark-mode .card , navbar {
   background-color: #2a2a2a;
   color: #ffffff;
 }
-
-/* Additional styling for input fields, buttons, etc. */
 body.dark-mode .form-control,
 body.dark-mode {
   background-color: #333;
@@ -32,15 +25,9 @@ body.dark-mode .btn-outline-light {
   color: #ffffff;
   border-color: #ffffff;
 }
-
-
-
-
-
-/* Dark mode styles */
 .my-app-dark {
-  background-color: #1e1e1e; /* Dark background */
-  color: #ffffff; /* Light text */
+  background-color: #1e1e1e;
+  color: #ffffff;
 }
 
 
@@ -49,15 +36,9 @@ body.dark-mode .btn-outline-light {
 .my-app-dark .card-2 p {
   color: white !important;
 }
-
-
-/* Fix icon colors */
 .my-app-dark .icon {
   color: #ffffff !important;
 }
-
-
-/* Default Light Navbar */
 .navbar-light {
   background-color: #ffffff !important;
   transition: background-color 0.3s ease-in-out;
@@ -67,8 +48,6 @@ body.dark-mode .btn-outline-light {
 .navbar-light .nav-link {
   color: black !important;
 }
-
-/* Dark Navbar */
 .navbar-dark {
   background-color: #222 !important;
 }
@@ -77,8 +56,6 @@ body.dark-mode .btn-outline-light {
 .navbar-dark .nav-link {
   color: white !important;
 }
-
-/* Dark Mode Toggle Button */
 .btn-dark {
   background-color: #222;
   border: none;
@@ -90,8 +67,6 @@ body.dark-mode .btn-outline-light {
   border: none;
   color: black;
 }
-
-/* Fix navbar position */
 .navbar {
   transition: background-color 0.3s ease-in-out;
 }
@@ -114,5 +89,80 @@ body.dark-mode .btn-outline-light {
 .dark-mode .btn {
   color: white !important;
   border-color: white !important;
+} */
+
+
+
+
+
+/* Dark mode styling for the entire app */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff !important;
 }
 
+/* Ensure all text is white */
+body.dark-mode p, 
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6, 
+body.dark-mode span, 
+body.dark-mode a {
+  color: white !important;
+}
+
+/* Fix navbar text and background */
+body.dark-mode .navbar {
+  background-color: #222 !important;
+}
+
+body.dark-mode .navbar a,
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+  color: white !important;
+}
+
+/* Card styling in dark mode */
+body.dark-mode .card {
+  background-color: #2a2a2a !important;
+  color: white !important;
+}
+
+/* Inputs and buttons */
+body.dark-mode textarea, 
+body.dark-mode select{
+  background-color: #333 !important;
+  color: white !important;
+  border: 1px solid #444 !important;
+}
+
+/* Buttons */
+body.dark-mode .btn, 
+body.dark-mode button {
+  color: white !important;
+  border-color: white !important;
+}
+
+/* Outlined buttons */
+body.dark-mode .btn-outline-dark {
+  color: white !important;
+  border: 1px solid white !important;
+}
+
+/* Footer text */
+body.dark-mode footer {
+  color: #aaa !important;
+}
+
+/* Icon color fix */
+body.dark-mode .icon {
+  color: white !important;
+}
+
+/* Navbar transitions for smooth effect */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
